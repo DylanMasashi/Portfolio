@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS -->
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Meu Portfólio</h1>
+        <span class="menu-icon" onclick="toggleMenu()">☰</span> <!-- Ícone do menu hambúrguer -->
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção "Sobre Mim" -->
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p> Olá! Meu nome é Dylan, sou desenvolvedor com experiência em HTML, CSS, JavaScript, 
+            Node, Next, React, MySQL, PHP, C, Java, Python e Delphi. 
+            Este portfólio apresenta alguns dos meus melhores projetos e meu contato.
+        </p>
+    </section>
+
+    <!-- Seção "Projetos" -->
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="projeto">
+            <!-- Projeto 1 -->
+            <div class="projeto-card">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do projeto. <br> Tecnologias: HTML, CSS, JavaScript.</p>
+            </div>
+            <!-- Projeto 2 -->
+            <div class="projeto-card">
+                <h3>Projeto 2</h3>
+                <p>Descrição breve do projeto. <br> Tecnologias: React, Node.js.</p>
+            </div>
+            <!-- Projeto 3 -->
+            <div class="projeto-card">
+                <h3>Projeto 3</h3>
+                <p>Descrição breve do projeto. <br> Tecnologias: MySQL, PHP.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção "Contato" -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form action="https://formspree.io/f/{seu-endereco}" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="_replyto" placeholder="Seu E-mail" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- JavaScript para o Menu Hambúrguer -->
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

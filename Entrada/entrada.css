@@ -1,0 +1,130 @@
+/* Estilo Global */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Fundo com imagem */
+.container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../Images/coffe.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imagem SVG no container */
+.imagem-interna {
+    max-width: 250px; /* Largura máxima */
+    width: 100%; /* Faz com que o SVG seja responsivo */
+    height: auto; /* Mantém as proporções */
+    position: absolute; /* Posiciona dentro do container */
+    top: 51.1%; /* Ajuste do topo */
+    left: 80%; /* Ajuste da lateral esquerda */
+    border-radius: 10px; /* Adiciona bordas arredondadas (opcional) */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); Sombra */
+    z-index: 1; /* Garante que fique acima do fundo */
+}
+
+/* Caixa de mensagens */
+.message-box {
+    text-align: center;
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente */
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    width: 30%;
+    height: auto;
+    margin-right: 200px;
+    margin-bottom: 100px;
+    animation: fadeIn 1s;
+}
+
+.message-box p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.message-box button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.message-box button:hover {
+    background-color: #555;
+}
+
+/* Estilo do botão com a imagem */
+#play-button {
+    background: none; /* Remove o fundo do botão */
+    border: 2px solid transparent; /* Começa sem borda visível */
+    padding: 0; /* Remove o padding do botão */
+    cursor: pointer; /* Cursor de ponteiro */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: border-color 0.3s, transform 0.2s ease; /* Transição suave para borda e transformação */
+}
+
+/* Estilos da imagem dentro do botão */
+#play-button img {
+    width: 35px; /* Ajuste o tamanho da imagem */
+    height: 35px; /* Ajuste a altura da imagem */
+    transition: opacity 0.3s, transform 0.2s ease; /* Transição suave para opacidade e transformação */
+}
+
+/* Efeito de hover no botão e imagem */
+#play-button:hover {
+    border-width: 2px;
+     /* Cor da borda ao passar o mouse */
+}
+
+#play-button:hover img {
+    opacity: 0.8; /* Diminui a opacidade da imagem quando o mouse passa sobre o botão */
+    transform: scale(1.1); /* Aumenta um pouco a imagem no hover */
+}
+
+/* Efeito de clique (pressionado) */
+#play-button:active {
+    transform: scale(0.95); /* Diminui a imagem e o botão ao ser pressionado */
+}
+
+/* Efeito de clique para borda e imagem */
+#play-button:active img {
+    opacity: 1; /* Opacidade total ao ser pressionado */
+}
+
+/* Trocar imagem no hover */
+#play-button:hover img {
+    content: url('../Images/play-buttton-next.png'); /* Substitua pelo caminho da imagem do hover */
+}
+
+/* Animação de transição */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+    .message-box p {
+        font-size: 1.2rem;
+    }
+    .message-box button {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,230 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    line-height: 1.6; /* Melhor leitura */
+    color: #333; /* Texto padrão */
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Ícone do menu hambúrguer */
+.menu-icon {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Navegação */
+nav {
+    display: none; /* Oculta para dispositivos móveis */
+}
+
+nav.show {
+    display: flex; /* Exibe o menu ao ativar */
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+/* Seções do portfólio */
+section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da seção "Sobre Mim" */
+#sobre {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#sobre h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#sobre p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo da seção "Projetos" */
+#projetos {
+    padding: 40px 20px;
+}
+
+#projetos h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projeto {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem ao espaço */
+    justify-content: center;
+    gap: 20px;
+}
+
+.projeto-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px; /* Tamanho fixo */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.projeto-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.projeto-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.projeto-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo da seção "Contato" */
+#contato {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contato input, #contato textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contato button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contato button:hover {
+    background-color: #555;
+}
+
+/* Responsividade */
+
+/* Para celulares */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Exibe o ícone do menu */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .projeto-card {
+        width: 90%; /* Ajusta os cartões ao tamanho da tela */
+    }
+}
+
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: row; /* Itens lado a lado */
+        justify-content: space-around;
+    }
+
+    .menu-icon {
+        display: none; /* Oculta o ícone do menu em tablets */
+    }
+}
+
+/* Para desktops */
+@media (min-width: 1024px) {
+    nav {
+        display: flex; /* Menu visível */
+    }
+
+    .menu-icon {
+        display: none; /* Esconde o ícone */
+    }
+
+    .projeto-card {
+        width: 300px; /* Tamanho fixo */
+    }
+}
