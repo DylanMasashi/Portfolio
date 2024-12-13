@@ -18,7 +18,7 @@ playButton.addEventListener("click", () => {
     // Se todas as mensagens já foram exibidas
     if (currentIndex >= messages.length) {
         // Redireciona para o repositório
-        window.location.href = "https://seu-usuario.github.io/seu-repositorio"; 
+        window.location.href = "https://dylanmasashi.github.io/Portfolio/"; 
         return; // Garante que não tenta trocar a mensagem após o redirecionamento
     }
 
