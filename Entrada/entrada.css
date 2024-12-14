@@ -10,24 +10,25 @@ body, html {
 /* Fundo com imagem */
 .container {
     display: flex;
-    justify-content: end;
-    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
     height: 100vh;
     background-image: url('../Images/coffe.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
+    position: relative; /* Garante que a imagem e outros elementos possam ser posicionados corretamente */
 }
 
 /* Imagem SVG no container */
 .imagem-interna {
-    max-width: 250px; /* Largura máxima */
-    width: 100%; /* Faz com que o SVG seja responsivo */
+    max-width: 250px; /* Tamanho máximo da imagem */
+    width: 100%; /* Torna a imagem responsiva */
     height: auto; /* Mantém as proporções */
     position: absolute; /* Posiciona dentro do container */
-    top: 51.1%; /* Ajuste do topo */
-    left: 80%; /* Ajuste da lateral esquerda */
-    border-radius: 10px; /* Adiciona bordas arredondadas (opcional) */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); Sombra */
+    top: 50%; /* Ajusta a posição vertical */
+    left: 50%; /* Ajusta a posição horizontal */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+    border-radius: 10px; /* Borda arredondada */
     z-index: 1; /* Garante que fique acima do fundo */
 }
 
@@ -39,10 +40,11 @@ body, html {
     padding: 20px;
     border-radius: 10px;
     color: #fff;
-    width: 30%;
-    height: auto;
-    margin-right: 200px;
-    margin-bottom: 100px;
+    width: 80%; /* Deixa a caixa de mensagem responsiva */
+    max-width: 500px; /* Limita a largura máxima */
+    margin: 20px;
+    z-index: 2; /* Garante que fique acima da imagem */
+    position: relative;
     animation: fadeIn 1s;
 }
 
@@ -86,7 +88,6 @@ body, html {
 /* Efeito de hover no botão e imagem */
 #play-button:hover {
     border-width: 2px;
-     /* Cor da borda ao passar o mouse */
 }
 
 #play-button:hover img {
@@ -119,12 +120,101 @@ body, html {
     }
 }
 
-/* Responsividade para Mobile */
+/* Responsividade para Mobile (até 768px) */
 @media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Ajuste da caixa de mensagem para telas menores */
+    .message-box {
+        width: 90%; /* Caixa mais larga no mobile */
+        max-width: none; /* Remove a largura máxima */
+        padding: 15px;
+        margin: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom:20%;
+    }
+
+    /* Ajusta a posição e tamanho da imagem */
+    .imagem-interna {
+        max-width: 400px; /* A imagem vai ocupar 100% da largura */
+        max-height: 400px; /* Limita a altura da imagem */
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+
+    /* Reduz o tamanho da fonte da mensagem */
     .message-box p {
         font-size: 1.2rem;
     }
+
+    /* Ajuste do botão para telas menores */
     .message-box button {
         font-size: 0.9rem;
+    }
+}
+
+/* Responsividade para Tablets (até 1024px) */
+@media (min-width: 1024px) {
+
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Ajuste da caixa de mensagem para tablets */
+    .message-box {
+        width: 60%;
+        padding: 20px;
+        max-width: 500px;
+        margin: 20px;
+    }
+
+    /* Ajuste da imagem interna */
+    .imagem-interna {
+        max-width: 400px;
+        top: 70%;
+        left: 70%;
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+}
+
+/* Responsividade para Desktop (a partir de 1025px) */
+@media (min-width: 1025px) {
+
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Tamanho original da caixa de mensagem */
+    .message-box {
+        width: 30%; /* Caixa de mensagens com largura padrão */
+        margin-right: 200px;
+        padding: 20px;
+    }
+
+    /* Ajuste do tamanho da fonte para telas grandes */
+    .message-box p {
+        font-size: 1.5rem;
+    }
+
+    /* Botão com tamanho padrão */
+    .message-box button {
+        font-size: 1rem;
+    }
+
+    /* Ajuste da imagem interna */
+    .imagem-interna {
+        max-width: 250px; /* Tamanho normal */
+        left: 80%; /* Posição original */
+        top: 51.1%; /* Posição original */
     }
 }
