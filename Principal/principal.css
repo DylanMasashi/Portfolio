@@ -1,6 +1,10 @@
 /* Estilo global */
 body {
+    width: 100%;
+    height: 100vh;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,19 +14,28 @@ body {
     color: #333; /* Texto padrão */
 }
 
-/* Cabeçalho */
-header {
+.container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #333;
-    color: white;
+    width: 100%;
 }
 
-header h1 {
-    font-size: 1.8rem;
-    margin: 0;
+/* Cabeçalho */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    flex-shrink: 0; /* Evita que a barra diminua */
+    top: 0; /* Fixa a barra no topo enquanto rola a página */
+}
+
+sidebar h1 {
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* Ícone do menu hambúrguer */
@@ -61,7 +74,6 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.1rem;
     transition: color 0.3s;
 }
 
@@ -71,28 +83,22 @@ nav ul li a:hover {
 
 /* Seções do portfólio */
 section {
+    display: flex;
+    flex: 1;
     padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
+    flex-direction: column;
+    margin: 50px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo da seção "Sobre Mim" */
-#sobre {
-    text-align: center;
+/* Estilo da seção "O que posso fazer por você?" */
+#Serviços {
+    font-size: 1.2rem;
     padding: 40px 20px;
-}
-
-#sobre h2 {
-    font-size: 2rem;
-    color: #333;
-}
-
-#sobre p {
-    font-size: 1rem;
-    color: #666;
+    text-align: center;
+    background-color: #989A91;
 }
 
 /* Estilo da seção "Projetos" */
@@ -115,7 +121,7 @@ section {
 }
 
 .projeto-card {
-    background-color: #f4f4f4;
+    background-color: #989A91;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 300px; /* Tamanho fixo */
@@ -136,13 +142,16 @@ section {
 
 .projeto-card p {
     font-size: 1rem;
-    color: #666;
+    color: #333;
 }
 
 /* Estilo da seção "Contato" */
 #contato {
     padding: 40px 20px;
     text-align: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
 }
 
 #contato h2 {
@@ -150,35 +159,52 @@ section {
     color: #333;
 }
 
-#contato form {
-    max-width: 600px;
-    margin: 0 auto;
+.social-links {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 20px;
 }
 
-#contato input, #contato textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.social-links a {
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s;
 }
 
-#contato button {
-    padding: 10px;
+.social-links a:hover {
+    color: #f4a261; /* Cor ao passar o mouse */
+}
+
+#curriculo {
+    font-size: 1.5rem;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #989A91;
+}
+
+.curriculo h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0%;
+}
+
+.btn-curriculo {
+    padding: 15px 30px;
     font-size: 1rem;
-    background-color: #333;
     color: white;
+    background-color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 30px;
     transition: background-color 0.3s;
 }
 
-#contato button:hover {
-    background-color: #555;
+.btn-curriculo:hover {
+    background-color: #f4a261;
 }
 
 /* Responsividade */

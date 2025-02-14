@@ -5,68 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="principal.css"> <!-- Link para o CSS -->
+    <link rel="stylesheet" href="principal.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Meu Portfólio</h1>
-        <span class="menu-icon" onclick="toggleMenu()">☰</span> <!-- Ícone do menu hambúrguer -->
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <!-- Barra lateral (Sidebar) -->
+        <aside class="sidebar">
+            <h1>Meu Portfólio</h1>
+            <span class="menu-icon" onclick="toggleMenu()">☰</span> <!-- Ícone do menu hambúrguer -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#O que posso fazer por você?">O que posso fazer por você?</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#curriculo">Curriculo</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <!-- Seção "Sobre Mim" -->
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p> Olá! Meu nome é Dylan, sou desenvolvedor com experiência em HTML, CSS, JavaScript, 
-            Node, Next, React, MySQL, PHP, C, Java, Python e Delphi. 
-            Este portfólio apresenta alguns dos meus melhores projetos e meu contato.
-        </p>
-    </section>
+        <!-- Conteúdo principal -->
+        <main class="content">
+            <section id="Serviços">
+                <h2>O que posso fazer por você?</h2>
+                <p>Eu posso criar sites, Lading Pages, Apps e Sistemas de Compras e Vendas.</p>
+            </section>
+            <!-- Seção "Projetos" -->
+            <section id="projetos">
+                <h2>Meus Projetos</h2>
+                <div class="projeto">
+                    <!-- Projeto 1 -->
+                    <div class="projeto-card">
+                        <h3>Projeto 1</h3>
+                        <p>Descrição breve do projeto. <br> Tecnologias: HTML, CSS, JavaScript.</p>
+                    </div>
+                    <!-- Projeto 2 -->
+                    <div class="projeto-card">
+                        <h3>Projeto 2</h3>
+                        <p>Descrição breve do projeto. <br> Tecnologias: React, Node.js.</p>
+                    </div>
+                    <!-- Projeto 3 -->
+                    <div class="projeto-card">
+                        <h3>Projeto 3</h3>
+                        <p>Descrição breve do projeto. <br> Tecnologias: MySQL, PHP.</p>
+                    </div>
+                    <!-- Projeto 4 -->
+                    <div class="projeto-card">
+                        <h3>Projeto 4</h3>
+                        <p>Descrição breve do projeto. <br> Tecnologias: MySQL, PHP.</p>
+                    </div>
+                    <!-- Projeto 5 -->
+                    <div class="projeto-card">
+                        <h3>Projeto 5</h3>
+                        <p>Descrição breve do projeto. <br> Tecnologias: MySQL, PHP.</p>
+                    </div>
+                    <!-- Projeto 6 -->
+                    <div class="projeto-card">
+                        <h3>Projeto 6</h3>
+                        <p>Descrição breve do projeto. <br> Tecnologias: MySQL, PHP.</p>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Seção "Projetos" -->
-    <section id="projetos">
-        <h2>Meus Projetos</h2>
-        <div class="projeto">
-            <!-- Projeto 1 -->
-            <div class="projeto-card">
-                <h3>Projeto 1</h3>
-                <p>Descrição breve do projeto. <br> Tecnologias: HTML, CSS, JavaScript.</p>
-            </div>
-            <!-- Projeto 2 -->
-            <div class="projeto-card">
-                <h3>Projeto 2</h3>
-                <p>Descrição breve do projeto. <br> Tecnologias: React, Node.js.</p>
-            </div>
-            <!-- Projeto 3 -->
-            <div class="projeto-card">
-                <h3>Projeto 3</h3>
-                <p>Descrição breve do projeto. <br> Tecnologias: MySQL, PHP.</p>
-            </div>
-        </div>
-    </section>
+            <!-- Seção "Contato" -->
+            <section id="contato">
+                <h2>Entre em Contato</h2>
+                <div class="social-links">
+                    <a href="https://github.com/DylanMasashi" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/5514996389087" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/seu-usuario" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:dylan.masashi25@gmail.com" title="E-mail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </section>
+            <!-- Seção "Currículo" -->
+            <section id="curriculo">
+                <h1>Currículo</h1>
+                <div class="curriculo">
+                    <p>Aqui você encontrará minhas formações academicas e meu currículo.</p>
+                    <a href="curriculo.pdf" download="curriculo.pdf">
+                        <button class="btn-curriculo">Download Currículo</button>
+                    </a>
+                </div>
+            </section>      
+        </main>
+    </div>
 
-    <!-- Seção "Contato" -->
-    <section id="contato">
-        <h2>Entre em Contato</h2>
-        <form action="http://formspree.io/f/{seu-endereco}" method="POST">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="email" name="_replyto" placeholder="Seu E-mail" required>
-            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <!-- JavaScript para o Menu Hambúrguer -->
     <script>
         function toggleMenu() {
-            const nav = document.querySelector('nav');
+            const nav = document.querySelector('.nav-menu');
             nav.classList.toggle('show');
         }
     </script>
