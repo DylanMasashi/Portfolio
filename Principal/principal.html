@@ -10,11 +10,10 @@
 </head>
 <body>
     <div class="container">
-        <!-- Barra lateral (Sidebar) -->
+        <!-- Barra lateral (Sidebar) para Desktop e iPad -->
         <aside class="sidebar">
             <h1>Meu Portfólio</h1>
             <img src="../Images/profile.jpg" alt="Minha Foto" class="profile-pic">
-            <span class="menu-icon" onclick="toggleMenu()">☰</span> <!-- Ícone do menu hambúrguer -->
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#servicos">O que posso fazer por você?</a></li>
@@ -24,6 +23,9 @@
                 </ul>
             </nav>
         </aside>
+
+        <!-- Ícone do menu hambúrguer (aparece no mobile) -->
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
 
         <!-- Conteúdo principal -->
         <main class="content">
@@ -35,8 +37,8 @@
             <section id="projetos">
                 <h2>Meus Projetos</h2>
                 <div class="projeto">
-                    <!-- Projeto 1 -->
-                    <div class="projeto-card">
+                     <!-- Projeto 1 -->
+                     <div class="projeto-card">
                         <h3>Projeto 1</h3>
                         <img src="../Images/profile.jpg" alt="Minha Foto" class="card-image">
                         <div class="tags">
